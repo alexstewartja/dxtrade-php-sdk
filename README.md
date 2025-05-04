@@ -1,3 +1,5 @@
+<center><img src="https://i.ibb.co/mCpQg1Wp/dxtrade-php-sdk-cover.png" alt="DXtrade PHP SDK"></center>
+
 # DXtrade PHP SDK
 
 [![Latest Stable Version](http://poser.pugx.org/alexstewartja/dxtrade-php-sdk/v)](https://packagist.org/packages/alexstewartja/dxtrade-php-sdk)
@@ -28,9 +30,6 @@ composer require alexstewartja/dxtrade-php-sdk
 First, initialize the DXtrade client:
 
 ```php
-use AlexStewartJa\DXtrade\DXtradeClient;
-use AlexStewartJa\DXtrade\Env;
-
 // Create a client in the demo environment
 $client = new DXtradeClient(Env::BASE_URL_DEMO);
 // Or in a custom/production environment
@@ -82,7 +81,7 @@ $users = $client->administrative()->users()->getUsers();
 $ssoToken = $client
     ->administrative()
     ->sso()
-    ->generateTokenForm('alex', 'uptrendprop'); // Generate SSO token for a user via POST
+    ->generateTokenForm('alex', 'uptrendprop'); // Generate SSO token for a user via HTTP POST
 
 // Brokers
 $brokers = $client->administrative()->brokers()->getBrokers();
@@ -186,7 +185,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for more details.
 
 ## Security
 
-If you discover any security related issues, please email 
+If you discover any security-related issues, please email 
 [dxtrade@alexstewartja.com](mailto:dxtrade@alexstewartja.com?Subject=DXtrade%20PHP%20SDK) instead of using the issue 
 tracker.
 

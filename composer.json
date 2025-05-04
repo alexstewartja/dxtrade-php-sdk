@@ -1,0 +1,59 @@
+{
+    "name": "alexstewartja/dxtrade-php-sdk",
+    "description": "PHP SDK for DXtrade's Administrative and Trading REST API endpoints",
+    "keywords": [
+        "dxtrade",
+        "trade",
+        "trading",
+        "forex",
+        "cfd",
+        "futures",
+        "crypto"
+    ],
+    "homepage": "https://github.com/alexstewartja/dxtrade-php-sdk",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alex Stewart",
+            "email": "dxtrade@alexstewartja.com",
+            "role": "Creator"
+        }
+    ],
+    "require": {
+        "php": "^8.1 || ^8.2 || ^8.3 || ^8.4",
+        "ext-json": "*",
+        "ext-reflection": "*",
+        "php-http/guzzle7-adapter": "^1.1"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.0",
+        "mockery/mockery": "^1.6",
+        "pestphp/pest": "^3.0",
+        "roave/security-advisories": "dev-latest",
+        "spatie/ray": "^1.28"
+    },
+    "autoload": {
+        "psr-4": {
+            "AlexStewartJa\\DXtrade\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AlexStewartJa\\DXtrade\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
