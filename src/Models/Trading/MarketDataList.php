@@ -13,8 +13,6 @@ class MarketDataList
      * Events type
      *
      * @see MarketEventType
-     *
-     * @var string|null
      */
     private ?string $eventsType = null;
 
@@ -24,7 +22,6 @@ class MarketDataList
      * @var Candle[]|Quote[]|null
      */
     private ?array $events = null;
-
 
     /**
      * Get events type.

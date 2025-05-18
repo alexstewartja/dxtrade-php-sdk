@@ -315,4 +315,3 @@ class Position
         return $this;
     }
 }
-

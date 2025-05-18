@@ -37,7 +37,7 @@ class CashTransfer
     /**
      * Cash transactions
      *
-     * @var CashTransaction[]|null $cashTransactions
+     * @var CashTransaction[]|null
      */
     private ?array $cashTransactions = null;
 
@@ -144,7 +144,7 @@ class CashTransfer
     /**
      * Set cash transactions.
      *
-     * @param CashTransaction[]|null $cashTransactions
+     * @param  CashTransaction[]|null  $cashTransactions
      */
     public function setCashTransactions(?array $cashTransactions): self
     {
