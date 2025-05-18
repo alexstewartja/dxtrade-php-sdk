@@ -39,6 +39,11 @@ class CurrencyMetrics
     private float|int|null $availableBalanceForWithdrawal = null;
 
     /**
+     * Withdrawable balance - Funds in this currency available for withdrawal
+     */
+    private float|int|null $withdrawableBalance = null;
+
+    /**
      * Conversion rate
      */
     private float|int|null $convRate = null;
@@ -152,6 +157,24 @@ class CurrencyMetrics
     public function setAvailableBalanceForWithdrawal(float|int|null $availableBalanceForWithdrawal): self
     {
         $this->availableBalanceForWithdrawal = $availableBalanceForWithdrawal;
+
+        return $this;
+    }
+
+    /**
+     * Get withdrawable balance - Funds in this currency available for withdrawal.
+     */
+    public function getWithdrawableBalance(): float|int|null
+    {
+        return $this->withdrawableBalance;
+    }
+
+    /**
+     * Set withdrawable balance - Funds in this currency available for withdrawal.
+     */
+    public function setWithdrawableBalance(float|int|null $withdrawableBalance): self
+    {
+        $this->withdrawableBalance = $withdrawableBalance;
 
         return $this;
     }

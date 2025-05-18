@@ -39,6 +39,11 @@ class AccountMetrics
     private float|int|null $availableFunds = null;
 
     /**
+     * Allocated funds - Total funds allocated to hold the current portfolio of product positions and / or orders for the whole account
+     */
+    private float|int|null $allocatedFunds = null;
+
+    /**
      * Credit
      */
     private float|int|null $credit = null;
@@ -191,6 +196,24 @@ class AccountMetrics
     public function setAvailableFunds(float|int|null $availableFunds): self
     {
         $this->availableFunds = $availableFunds;
+
+        return $this;
+    }
+
+    /**
+     * Get allocated funds.
+     */
+    public function getAllocatedFunds(): float|int|null
+    {
+        return $this->allocatedFunds;
+    }
+
+    /**
+     * Set allocated funds.
+     */
+    public function setAllocatedFunds(float|int|null $allocatedFunds): self
+    {
+        $this->allocatedFunds = $allocatedFunds;
 
         return $this;
     }
@@ -373,3 +396,4 @@ class AccountMetrics
         ];
     }
 }
+
