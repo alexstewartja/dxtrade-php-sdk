@@ -148,6 +148,16 @@ class Order
     private ?int $hedgedOrderId = null;
 
     /**
+     * Issue time - Timestamp in UTC when this order was accepted by the system
+     */
+    private ?DXtradeDateTime $issueTime = null;
+
+    /**
+     * Expire date - Order expiration date in UTC
+     */
+    private ?DXtradeDateTime $expireDate = null;
+
+    /**
      * Get account in format clearing_code:account_code.
      */
     public function getAccount(): ?string
@@ -593,6 +603,42 @@ class Order
     public function setHedgedOrderId(?int $hedgedOrderId): self
     {
         $this->hedgedOrderId = $hedgedOrderId;
+
+        return $this;
+    }
+
+    /**
+     * Get issue time - Timestamp in UTC when this order was accepted by the system.
+     */
+    public function getIssueTime(): ?DXtradeDateTime
+    {
+        return $this->issueTime;
+    }
+
+    /**
+     * Set issue time - Timestamp in UTC when this order was accepted by the system.
+     */
+    public function setIssueTime(?DXtradeDateTime $issueTime): self
+    {
+        $this->issueTime = $issueTime;
+
+        return $this;
+    }
+
+    /**
+     * Get expire date - Order expiration date in UTC.
+     */
+    public function getExpireDate(): ?DXtradeDateTime
+    {
+        return $this->expireDate;
+    }
+
+    /**
+     * Set expire date - Order expiration date in UTC.
+     */
+    public function setExpireDate(?DXtradeDateTime $expireDate): self
+    {
+        $this->expireDate = $expireDate;
 
         return $this;
     }

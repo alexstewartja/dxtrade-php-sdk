@@ -1,10 +1,8 @@
 name: dxtrade-php-sdk
-config:
-  webroot: .
 services:
   appserver:
     type: php:8.4
-    via: apache:latest
+    proxy: "OFF"
     build:
       - composer self-update
-      - composer install
+      - composer update

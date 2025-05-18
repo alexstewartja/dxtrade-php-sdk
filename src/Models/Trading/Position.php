@@ -73,6 +73,11 @@ class Position
     private ?float $stopLossPrice = null;
 
     /**
+     * Open time - Timestamp in UTC when this position was opened
+     */
+    private ?DXtradeDateTime $openTime = null;
+
+    /**
      * Get account in format clearing_code:account_code.
      */
     public function getAccount(): ?string
@@ -288,6 +293,24 @@ class Position
     public function setStopLossPrice(?float $stopLossPrice): self
     {
         $this->stopLossPrice = $stopLossPrice;
+
+        return $this;
+    }
+
+    /**
+     * Get open time - Timestamp in UTC when this position was opened.
+     */
+    public function getOpenTime(): ?DXtradeDateTime
+    {
+        return $this->openTime;
+    }
+
+    /**
+     * Set open time - Timestamp in UTC when this position was opened.
+     */
+    public function setOpenTime(?DXtradeDateTime $openTime): self
+    {
+        $this->openTime = $openTime;
 
         return $this;
     }
